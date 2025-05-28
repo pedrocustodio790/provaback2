@@ -1,0 +1,13 @@
+com\example\provaback2\Repository\ClienteRepository.class
+com\example\provaback2\Service\ClienteService.class
+com\example\provaback2\Entity\Material.class
+com\example\provaback2\Service\MaterialService.class
+com\example\provaback2\DTO\ClienteResponseDTO.class
+com\example\provaback2\DTO\MaterialDTO.class
+com\example\provaback2\Controller\MaterialController.class
+com\example\provaback2\Repository\MaterialRepository.class
+com\example\provaback2\Entity\Cliente.class
+com\example\provaback2\DTO\ClienteDTO.class
+com\example\provaback2\Provaback2Application.class
+com\example\provaback2\Controller\ClienteController.class
+com\example\provaback2\DTO\MaterialResponseDTO.class

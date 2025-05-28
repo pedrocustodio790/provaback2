@@ -8,6 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MaterialRepository  extends JpaRepository<Material, Long>{
-    Optional<List> findbytipo (String Tipo);
+    Optional<List> findbyTipo (String Tipo);
 
 }
