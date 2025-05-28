@@ -23,7 +23,11 @@ public class MaterialService {
         material.setTipo(dto.getTipo());
         material.setQuantidade(dto.getQuantidade());
         material.setEspecificacao(dto.getEspecificacao());
-        material.setId(dto.getId());
+
+        // Somente se estiver atualizando (opcional)
+        if (dto.getId() != null) {
+            material.setId(dto.getId());
+        }
 
         return toDTO(repository.save(material));
     }
@@ -36,8 +40,13 @@ public class MaterialService {
 
     public MaterialResponseDTO buscarPorId(Long id) {
         Material material = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Material não encontrado"));
+                .orElseThrow(() -> new EntityNotFoundException("Material com ID " + id + " não encontrado"));
         return toDTO(material);
+    }
+
+    public Material buscarEntidadePorId(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Material com ID " + id + " não encontrado"));
     }
 
     private MaterialResponseDTO toDTO(Material material) {
@@ -48,10 +57,5 @@ public class MaterialService {
         dto.setQuantidade(material.getQuantidade());
         dto.setEspecificacao(material.getEspecificacao());
         return dto;
-    }
-
-    public Material getById(Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Material não encontrado"));
     }
 }
