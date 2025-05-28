@@ -5,10 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 public interface MaterialRepository  extends JpaRepository<Material, Long>{
-    List <Material> findbyTipo(String tipo);
-    List <Material>findbyQuantidade(BigDecimal quantidade);
-    List <Material> Findbyespecificaca(String especificacao);
+    Optional<List> findbytipo (String Tipo);
 
 }
