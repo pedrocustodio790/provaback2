@@ -34,13 +34,13 @@ public class ClienteService {
 
     public ClienteResponseDTO buscarPorId(Long id) {
         Cliente cliente = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
+                .orElseThrow(() -> new EntityNotFoundException("Cliente com ID " + id + " não encontrado"));
         return toDTO(cliente);
     }
 
     public ClienteResponseDTO atualizar(Long id, ClienteDTO dto) {
         Cliente cliente = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
+                .orElseThrow(() -> new EntityNotFoundException("Cliente com ID " + id + " não encontrado"));
 
         cliente.setNome(dto.getNome());
         cliente.setTelefone(dto.getTelefone());
@@ -51,7 +51,7 @@ public class ClienteService {
 
     public void excluir(Long id) {
         Cliente cliente = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
+                .orElseThrow(() -> new EntityNotFoundException("Cliente com ID " + id + " não encontrado"));
         repository.delete(cliente);
     }
 
