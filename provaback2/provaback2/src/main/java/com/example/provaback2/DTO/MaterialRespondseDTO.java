@@ -6,16 +6,20 @@ import java.math.BigDecimal;
 
 @Data
 public class MaterialRespondseDTO {
-    private Long id;
-
-    private String endereco;
-;
-    private String Nome;
-    private String tipo;
-    private String especificacao;
     private BigDecimal quantidade;
+    private Long id;
+    private String Nome;
 
-    public Long getid() {
-        return getid();
+    private String tipo;
+
+    private String especificacao;;
+
+    public MaterialRespondseDTO(Long id, String Nome,String tipo , String especificacao){
+        this.id = id;
+        this.id = id;
+        this.id = especificacao;
+        this.id = tipo;
+        this.Nome = nome;
+
+
     }
-}
