@@ -19,7 +19,7 @@ public class Material {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String Tipo;
+    private String tipo;
     private BigDecimal quantidade;
     private String especificacao;
 
