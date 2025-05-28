@@ -1,6 +1,5 @@
-package com.example.provaback2.Entity;
+package com.example.provaback2.entity;
 
-import jakarta.annotation.sql.DataSourceDefinition;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,15 +12,21 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Material {
-@Id
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-private String Nome;
 
-private String tipo;
+    @Column(nullable = false)
+    private String nome;
 
-private String especificacao;
-@Column(unique = true, updatable = true)
-private BigDecimal quantidade;
+    @Column(nullable = false)
+    private String tipo;
+
+    @Column(nullable = false)
+    private String especificacao;
+
+    @Column(nullable = false)
+    private BigDecimal quantidade;
 
 }
