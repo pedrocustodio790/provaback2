@@ -1,4 +1,4 @@
-package com.example.provaback2.Entity;
+package com.example.provaback2.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,16 +9,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class CLiente {
+public class Cliente {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String nome;
-@Column(unique = false, nullable = true)
+
+    @Column(nullable = true)
     private String telefone;
-@Column(unique = true, nullable = false)
+
+    @Column(nullable = false)
     private String endereco;
-
-
 }
