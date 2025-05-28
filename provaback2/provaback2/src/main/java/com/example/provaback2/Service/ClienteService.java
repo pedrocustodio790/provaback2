@@ -2,7 +2,7 @@ package com.example.provaback2.Service;
 
 import com.example.provaback2.Entity.Cliente;
 import com.example.provaback2.Repository.ClienteRepository;
-import com.example.provaback2.dto.ClienteDTO;
+import com.example.provaback2.DTO.ClienteDTO;
 import com.example.provaback2.DTO.ClienteResponseDTO;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

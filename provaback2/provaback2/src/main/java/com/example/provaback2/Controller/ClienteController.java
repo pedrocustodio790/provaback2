@@ -1,6 +1,6 @@
 package com.example.provaback2.Controller;
 
-import com.example.provaback2.dto.ClienteDTO;
+import com.example.provaback2.DTO.ClienteDTO;
 import com.example.provaback2.DTO.ClienteResponseDTO;
 import com.example.provaback2.Service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;

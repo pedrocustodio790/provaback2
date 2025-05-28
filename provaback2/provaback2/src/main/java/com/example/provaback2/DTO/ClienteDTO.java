@@ -1,11 +1,13 @@
-package com.example.provaback2.dto;
+package com.example.provaback2.DTO;
 
-import lombok.Data;
-import java.io.Serializable;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class ClienteDTO implements Serializable {
+@Setter
+@Getter
+public class ClienteDTO {
     private String nome;
     private String telefone;
     private String endereco;
+
 }
