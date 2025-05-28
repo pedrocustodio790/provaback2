@@ -1,4 +1,4 @@
-package com.example.provaback2.entity;
+package com.example.provaback2.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

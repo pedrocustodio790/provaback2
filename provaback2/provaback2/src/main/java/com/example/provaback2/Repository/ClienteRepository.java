@@ -1,13 +1,13 @@
 package com.example.provaback2.Repository;
 
-import com.example.provaback2.Entity.CLiente;
-import com.example.provaback2.Entity.cliente;
+import com.example.provaback2.Entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
-public interface ClienteRepository  extends JpaRepository <cliente, Long> {
-List<CLiente> findbytelefone(String nome);
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+    List<Cliente> findByNome(String nome); // Busca por nome
 
+    Arrays findByNomeContainingIgnoreCase(String nome);
 }

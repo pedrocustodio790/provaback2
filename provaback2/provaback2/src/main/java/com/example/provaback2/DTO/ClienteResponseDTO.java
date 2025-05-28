@@ -1,4 +1,4 @@
-package com.example.provaback2.dto;
+package com.example.provaback2.DTO;
 
 import lombok.Data;
 import java.io.Serializable;
