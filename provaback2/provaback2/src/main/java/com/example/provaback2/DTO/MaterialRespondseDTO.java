@@ -1,25 +1,19 @@
-package com.example.provaback2.DTO;
+package com.example.provaback2.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
-public class MaterialRespondseDTO {
-    private BigDecimal quantidade;
+@NoArgsConstructor
+@AllArgsConstructor
+public class MaterialResponseDTO {
+
     private Long id;
-    private String Nome;
-
+    private String nome;
     private String tipo;
-
-    private String especificacao;;
-
-    public MaterialRespondseDTO(Long id, String Nome,String tipo , String especificacao){
-        this.id = id;
-        this.id = id;
-        this.id = especificacao;
-        this.id = tipo;
-        this.Nome = nome;
-
-
-    }
+    private String especificacao;
+    private BigDecimal quantidade;
+}
