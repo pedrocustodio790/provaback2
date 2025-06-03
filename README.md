@@ -22,13 +22,51 @@ alguma relação entre promises, async await e callbacks? Se
 sim explique:
 d) No contexto de JavaScript o que é event loop?
 
-4) Dado o seguinte script.js.
+4) Dado o seguinte script.js. function validar(entrada, callback ){
+    let padrao = /^\d{4}-\d{2}-\d{2}$/;
+    if (!padrao.test(entrada)){
+    console.log("entrada invalida!");
+    return 
+}
+let data = new Date(entrada); 
+if (isNaN(data.getTime())){
+    console.log("Data invalida")
+    return;
+}
+useCallback(data);
+} 
+function calcular(date){
+    let data = new Date();
+    let tempoDif = Math.abs(Number(data)- date);
+    let diadif = = Math=.ceil(tempoDif/(1000*60*60*24));
+    console.log('a dta fornecida está a ${diaDif} dias de hoje .');
+}
 
 Informe a saída obtida em console, com base na data atual.
 Para validar o programa você deve, respeite a estrutura de callback
 bem como a regex criada.
 
-5) Dado o seguinte script.js.
+5) Dado o seguinte script.js.  function comDelay(){
+    console.log("3");
+    set Timeout(()=>{
+        console.log("2");
+    }, 2000);
+}Promise.resolve().then(()=>{
+    console.log("1");
+});
+console.log("4");
+function main (){
+    console.log("8");
+    comDelay();
+    Promise.resolve().then(()=> {
+        console.log("6")
+    });
+    setTimeout(()=> {
+        console.log("5");
+    }, 1000);
+    console.log("7");
+}
+main();
 
 Qual a ordem de exibição dos números? Explique com suas palavras
 porque essa ordem acontece?
